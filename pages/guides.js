@@ -4,9 +4,10 @@ import styles from '../styles/Guides.module.css'
 export default function Guides() {
 
   useEffect(() => {
-    fetch('/.netlify/functions/guides')
+    fetch('/.netlify/functions/guide')
       .then(res=> res.json())
       .then(data => console.log(data))
+      .catch(err => console.error(err))
   }, [])
 
   return (
