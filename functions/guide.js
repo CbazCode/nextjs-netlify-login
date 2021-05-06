@@ -4,19 +4,19 @@ exports.handler = async (event, context) => {
       { title: 'Mario Kart Shortcuts You Never Knew Existed', author: 'luigi' },
       { title: 'Ultimate Street Fighter Guide', author: 'chun-li' },
     ]
-  
-    if (context.clientContext.user) {
+    console.log('context: ',context.clientContext)
+    // if (context.clientContext.user) {
       // fetch data & then return
       return {
         statusCode: 200,
         body: JSON.stringify(guides)
       }
-    }
+    // }
   
     // return error status
-    return {
-      statusCode: 401,
-      body: JSON.stringify({ mssg: 'ah ah ah, you must be logged into see this' })
-    }
+    // return {
+    //   statusCode: 401,
+    //   body: JSON.stringify({ mssg: 'ah ah ah, you must be logged into see this' })
+    // }
   
   }
